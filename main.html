@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      #loading {
+        display: none;
+        text-align: center;
+        margin: 20px;
+      }
+      .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin: auto;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      #error {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 15px;
+      }
+      img {
+        margin: 10px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- the entire body must be written by student -->
+    <button id="download-images-button">Download Images</button>
+    <div id="loading"><div class="spinner"></div></div>
     <div id="output"></div>
+    <div id="error"></div>
+
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
